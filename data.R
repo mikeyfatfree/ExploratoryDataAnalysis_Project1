@@ -7,6 +7,10 @@ readFile <- function(dataDir) {
 
   power$datetime <- strptime(paste(power$Date,power$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
   power$Global_active_power <- as.numeric(power$Global_active_power)
+  power$Voltage <- as.numeric(power$Voltage)
+  power$Sub_metering_1 <- as.numeric(power$Sub_metering_1)
+  power$Sub_metering_2 <- as.numeric(power$Sub_metering_2)
+  power$Sub_metering_3 <- as.numeric(power$Sub_metering_3)
   
   return(power)
 }
